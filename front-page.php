@@ -29,7 +29,12 @@
                                     <div class="col-12 col-md-6">
                                         <div class="welcome-text">
                                             <h2 data-animation="fadeInUp" data-delay="100ms"><?php the_title(); ?></h2>
-                                            <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_excerpt(); ?></h5>
+                                            <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_excerpt();?>
+                                                <?php $slider_data = get_post_meta($post->ID, 'slider_data', true);
+                                                pr($slider_data);
+                                                echo $slider_data['ingredients'];
+                                                ?>
+                                            </h5>
                                             <a href="#" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
                                         </div>
                                     </div>
