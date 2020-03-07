@@ -13,7 +13,7 @@
             $slider->the_post();
 
               $slider_data = get_post_meta($post->ID, 'slider_data', true);
-              $post_id = $slider_data['posts_1'];
+              $post_id = $slider_data['posts'];
               $post_url =  get_post_permalink($post_id);
               pr($post_id);
     ?>

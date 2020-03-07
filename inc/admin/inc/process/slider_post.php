@@ -5,7 +5,7 @@ function uza_save_slider_post_admin( $post_id, $post, $update){
     }
 
     $slider_data = array();
-    $slider_data['posts_1'] = sanitize_text_field($_POST['posts_1']);
+    $slider_data['posts'] = sanitize_text_field($_POST['posts']);
     $slider_data['color1'] = sanitize_text_field($_POST['color1']);
     $slider_data['color2'] = sanitize_text_field($_POST['color2']);
 
