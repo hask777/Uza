@@ -17,8 +17,8 @@ function uza_add_admin_page(){
 }
 add_action('admin_menu', 'uza_add_admin_page');
 
-require_once 'settings/settings.php';
-require_once 'ui/pages-ui.php';
+require_once 'uza-theme/settings/settings.php';
+require_once 'uza-theme/ui/pages-ui.php';
 
 // Create cuatom post type Slider
 add_action('init', 'uza_custom_post_type_init');
@@ -40,6 +40,9 @@ require_once 'inc/process/slider_post.php';
 add_filter('the_content', 'uza_slider_data_filter_content');
 require_once 'inc/process/slider-data-filter.php';
 
+//
+require_once 'inc/process/slider-db.php';
+add_action('init', 'create_slider_table');
 
 class irisDemo {
 	function __construct(){
