@@ -20,3 +20,5 @@
         background-color: <?php echo $slider_data['color2']; ?>
     }
 </style>
+</div>
+<div class="col-md-6">

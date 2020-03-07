@@ -6,7 +6,7 @@ $args = array(
 $posts = new WP_Query($args);
 
 $posts_list =  esc_attr(get_option('posts'));
-pr($posts_list);
+// pr($posts_list);
 ?>
   <select class="" name="posts">
       <?php

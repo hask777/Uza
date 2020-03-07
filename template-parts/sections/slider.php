@@ -15,13 +15,13 @@
               $slider_data = get_post_meta($post->ID, 'slider_data', true);
               $post_id = $slider_data['posts'];
               $post_url =  get_post_permalink($post_id);
-              pr($post_id);
+              // pr($post_id);
     ?>
     <!-- Single Welcome Slide -->
       <div class="single-welcome-slide">
           <!-- Background Curve -->
           <div class="background-curve">
-              <img src="./img/core-img/curve-1.png" alt="">
+              <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-1.png'; ?>" alt="">
           </div>
 
           <!-- Welcome Content -->

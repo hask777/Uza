@@ -1,0 +1,20 @@
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.welcome-area-admin{
+
+  .welcome_area_content{
+    .welcome_area_text_container{
+
+    }
+    .welcome_area_image_container{
+      .welcome_thumbnail{
+        img{
+          max-width: 40%;
+        }
+      }
+    }
+  }
+}
