@@ -1,3 +1,4 @@
+
 <!-- ***** Welcome Area Start ***** -->
 <section class="welcome-area">
   <div class="welcome-slides owl-carousel">
@@ -14,8 +15,11 @@
 
               $slider_data = get_post_meta($post->ID, 'slider_data', true);
               $post_id = $slider_data['posts'];
+              $slider_button_collor =  $slider_data['color_button'];
               $post_url =  get_post_permalink($post_id);
-              // pr($post_id);
+              pr($slider_button_collor);
+
+
     ?>
     <!-- Single Welcome Slide -->
       <div class="single-welcome-slide">
@@ -33,7 +37,9 @@
                           <div class="welcome-text">
                               <h2 data-animation="fadeInUp" data-delay="100ms"><?php the_title(); ?></h2>
                               <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_content(); ?></h5>
-                              <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
+                              <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
+                              style="background-color:<?php $slider_data['color_button']; ?>"
+                              data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
                           </div>
                       </div>
                       <!-- Welcome Thumbnail -->

@@ -7,9 +7,15 @@
    padding: 20px;
    border: 1px solid #eee;
    position: relative;
+   .admin_slider_bgc{
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.5;
+      position: absolute;
+   }
    .welcome_area_admin_container{
       width: 100%;
-   }
       .background-curve{
          position: absolute;
          top: 0;
@@ -18,6 +24,7 @@
             max-width: 100%;
          }
       }
+   }
   .welcome_area_content{
      min-width: 100%;
       .welcome_area_text_container{

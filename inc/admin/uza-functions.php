@@ -40,9 +40,8 @@ require_once 'inc/slider/process/slider_post.php';
 add_filter('the_content', 'uza_slider_data_filter_content');
 require_once 'inc/slider/process/slider-data-filter.php';
 
-//Slider new table
-require_once 'inc/slider/process/slider-db.php';
-add_action('init', 'create_slider_table');
+//Admin styles for slider
+require_once 'inc/slider/functions/style-functions.php';
 
-//Slider Iris Color Picker Class
-// require_once 'inc/slider/iris/class-iris.php';
+//Admin styles for slider
+require_once 'inc/slider/settings/settings.php';

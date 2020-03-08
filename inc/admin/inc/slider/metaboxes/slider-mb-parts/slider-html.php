@@ -7,12 +7,16 @@
   // pr($post_url);
 ?>
       <section class="welcome-area-admin flex align_vertical align_horizontal">
+         <div class="admin_slider_bgc">
+
+         </div>
         <div class="welcome_area_admin_container">
           <!-- Single Welcome Slide -->
                 <!-- Background Curve -->
                 <div class="background-curve">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-1.png';?>" alt="">
                 </div>
+
                 <!-- Welcome Content -->
                 <div class="container">
                     <div class="row">

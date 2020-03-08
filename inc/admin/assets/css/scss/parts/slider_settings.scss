@@ -16,11 +16,32 @@
       }
    }
    .admin_slider_button_text{
-      padding: 10px 0px;
-      label{
-         display: block;
-      }
-      select{
+      .admin_slider_button_text_div{
+         // display: inline-block;
+         padding: 10px 0px;
+         margin-right: 20px;
+         h2{
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0;
+         }
+         .form-table{
+            tbody{
+               tr{
+                  // th{
+                  //    display: block;
+                  // }
+                  // td{
+                  //    display: block;
+                  // }
+               }
+            }
+         }
+         .wp-picker-container{
+            .button{
+               vertical-align: inherit;
+            }
+         }
       }
    }
    .admin_slider_colors{

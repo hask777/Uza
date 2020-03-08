@@ -17,6 +17,7 @@ function uza_admin_metabox_init(){
                 'posts'     => '',
                 'color1'    => '',
                 'color2'    => '',
+                'color_button'    => '',
                 'post_type' => '',
             );
         }
@@ -26,5 +27,6 @@ function uza_admin_metabox_init(){
         require_once 'slider-mb-parts/button-text.php';
         require_once 'slider-mb-parts/slider-color-picker.php';
         require_once 'slider-mb-parts/slider-html.php';
+
     }
 }
