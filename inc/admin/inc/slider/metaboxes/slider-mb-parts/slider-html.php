@@ -6,12 +6,12 @@
   $post_url =  get_post_permalink($post_id);
   // pr($post_url);
 ?>
-      <section class="welcome-area-admin">
-        <div class="">
+      <section class="welcome-area-admin flex align_vertical align_horizontal">
+        <div class="welcome_area_admin_container">
           <!-- Single Welcome Slide -->
                 <!-- Background Curve -->
                 <div class="background-curve">
-                    <img src="./img/core-img/curve-1.png" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-1.png';?>" alt="">
                 </div>
                 <!-- Welcome Content -->
                 <div class="container">
@@ -19,19 +19,19 @@
                         <div class="welcome_area_content col-md-12 flex">
                             <!-- Welcome Text -->
                             <div class="welcome_area_text_container col-md-6">
-                                <div class="welcome-text">
-                                    <h2 data-animation="fadeInUp" data-delay="100ms">
+                                <div class="welcome_text">
+                                    <h3 class="welcom_text_title" data-animation="fadeInUp" data-delay="100ms">
                                       <?php echo  $post->post_title;?>
-                                    </h2>
+                                   </h3>
                                     <h5 data-animation="fadeInUp" data-delay="400ms">
                                       <?php echo $post->post_content; ?>
                                     </h5>
-                                    <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
+                                    <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2 " data-animation="fadeInUp" data-delay="700ms"><span>Start Exploring</span></a>
                                 </div>
                             </div>
                             <!-- Welcome Thumbnail -->
                             <div class="welcome_area_image_container col-md-6">
-                                <div class="welcome_thumbnail">
+                                <div class="welcome_thumbnail flex align_vertical align_horizontal">
                                   <?php
                                     if(get_the_post_thumbnail_url($post_id))
                                     {?>

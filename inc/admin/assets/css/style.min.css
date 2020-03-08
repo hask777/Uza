@@ -1,2 +1,24 @@
 .flex{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.welcome-area-admin .welcome_area_content .welcome_area_image_container .welcome_thumbnail img{max-width:40%}
+.align_horizontal{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.align_vertical{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.slider_wrapper{padding:20px 0}
+.welcome-area-admin{width:100%;height:300px;padding:20px;border:1px solid #eee;position:relative}
+.welcome-area-admin .welcome_area_admin_container{width:100%}
+.welcome-area-admin .background-curve{position:absolute;top:0;left:35%}
+.welcome-area-admin .background-curve img{max-width:100%}
+.welcome-area-admin .welcome_area_content{min-width:100%}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text{padding:20px 0}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text .welcom_text_title{font-size:16px}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text h5{font-size:10px}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text .btn{display:block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;font-size:1rem;border-radius:.25rem;-webkit-transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text .uza-btn{position:relative;z-index:1;min-width:80px;height:25px;font-size:12px;font-weight:600;display:inline-block;padding:0 10px;text-align:center;text-transform:capitalize;color:#1583e9;border:0;border-radius:50px;background-color:#fff;-webkit-transition-duration:500ms;transition-duration:500ms;-webkit-box-shadow:0 6px 50px 8px rgba(21,131,233,0.15);box-shadow:0 6px 50px 8px rgba(21,131,233,0.15)}
+.welcome-area-admin .welcome_area_content .welcome_area_text_container .welcome_text .btn-2{background-color:#1583e9;color:#fff}
+.welcome-area-admin .welcome_area_content .welcome_area_image_container .welcome_thumbnail img{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:80%}
+.slider_wrapper .admin_slider_post_select{padding:10px 0}
+.slider_wrapper .admin_slider_post_select label{display:block}
+.slider_wrapper .admin_slider_post_type_select{padding:10px 0}
+.slider_wrapper .admin_slider_post_type_select label{display:block}
+.slider_wrapper .admin_slider_button_text{padding:10px 0}
+.slider_wrapper .admin_slider_button_text label{display:block}
+.slider_wrapper .admin_slider_colors{padding:10px 0}
+.slider_wrapper .admin_slider_colors label{display:block}

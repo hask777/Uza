@@ -23,7 +23,7 @@ function uza_admin_metabox_init(){
 
         require_once 'slider-mb-parts/post-type-loop.php';
         require_once 'slider-mb-parts/post-loop.php';
-
+        require_once 'slider-mb-parts/button-text.php';
         require_once 'slider-mb-parts/slider-color-picker.php';
         require_once 'slider-mb-parts/slider-html.php';
     }
