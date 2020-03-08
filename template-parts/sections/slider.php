@@ -14,12 +14,12 @@
             $slider->the_post();
 
               $slider_data = get_post_meta($post->ID, 'slider_data', true);
-              $post_id = $slider_data['posts'];
+
+              $post_id = $slider_data['posts_1'];
               $slider_button_collor =  $slider_data['color_button'];
+              $slider_button_text =  $slider_data['slider_button_text'];
               $post_url =  get_post_permalink($post_id);
-              pr($slider_button_collor);
-
-
+              // pr($slider_button_collor);
     ?>
     <!-- Single Welcome Slide -->
       <div class="single-welcome-slide">
@@ -38,8 +38,7 @@
                               <h2 data-animation="fadeInUp" data-delay="100ms"><?php the_title(); ?></h2>
                               <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_content(); ?></h5>
                               <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
-                              style="background-color:<?php $slider_data['color_button']; ?>"
-                              data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
+                              data-animation="fadeInUp" data-delay="700ms"><?php echo $slider_button_text; ?></a>
                           </div>
                       </div>
                       <!-- Welcome Thumbnail -->

@@ -10,14 +10,21 @@ $posts_list =  esc_attr(get_option('posts'));
 ?>
 <div class="admin_slider_post_type_select">
    <label for="posts"><?php echo __('Выбрать ссылку на пост', 'uza'); ?></label>
-     <select class="" name="posts">
+     <select class="" name="posts_1">
          <?php
          if($posts->have_posts()){
              while( $posts->have_posts() ){
                  $posts->the_post();
+                 $id = get_the_ID()
                  ?>
-                   <option  value="<?php echo get_the_ID();?>"><?php the_title();?></option>
+                  <option
+                     value="<?php echo $id;?>"
+                     <?php if($slider_data['posts_1'] == $id) echo 'selected'; ?>
+                     >
+                     <?php the_title();?>
+                  </option>
                  <?
+                 // pr($slider_data['posts_1']);
              }
          }
      ?>

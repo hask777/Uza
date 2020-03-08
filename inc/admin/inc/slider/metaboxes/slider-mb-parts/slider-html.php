@@ -3,6 +3,7 @@
 <?php
   $slider_data = get_post_meta($post->ID, 'slider_data', true);
   $post_id = $slider_data['posts_1'];
+  $button_text = $slider_data['slider_button_text'];
   $post_url =  get_post_permalink($post_id);
   // pr($post_url);
 ?>
@@ -30,7 +31,8 @@
                                     <h5 data-animation="fadeInUp" data-delay="400ms">
                                       <?php echo $post->post_content; ?>
                                     </h5>
-                                    <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2 " data-animation="fadeInUp" data-delay="700ms"><span>Start Exploring</span></a>
+                                    <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2 " data-animation="fadeInUp" data-delay="700ms"><span>
+                                       <?php echo $button_text; ?></span></a>
                                 </div>
                             </div>
                             <!-- Welcome Thumbnail -->
