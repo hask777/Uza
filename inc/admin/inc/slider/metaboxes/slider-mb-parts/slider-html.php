@@ -39,12 +39,12 @@
                             <div class="welcome_area_image_container col-md-6">
                                 <div class="welcome_thumbnail flex align_vertical align_horizontal">
                                   <?php
-                                    if(get_the_post_thumbnail_url($post_id))
-                                    {?>
-                                      <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="" data-animation="slideInRight" data-delay="400ms">
-                                    <?}else
+                                    if(get_the_post_thumbnail_url($post->ID))
                                     {?>
                                       <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="" data-animation="slideInRight" data-delay="400ms">
+                                    <?}else
+                                    {?>
+                                      <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="" data-animation="slideInRight" data-delay="400ms">
                                     <?}
                                   ?>
                                 </div>
