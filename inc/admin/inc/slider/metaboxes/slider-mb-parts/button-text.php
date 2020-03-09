@@ -19,6 +19,7 @@
             value="<?php echo $slider_data['color_button']; ?>"
          >
          <span><?php echo	$button_collor =  $slider_data['color_button']; ?></span>
+         <input type="text" name="slide_class_name" value="<?php echo $slider_data['slide_class_name'] ?>">
       </div>
    </div>
       <style media="screen">
