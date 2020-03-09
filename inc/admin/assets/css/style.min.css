@@ -17,10 +17,11 @@
 .welcome-area-admin .welcome_area_content .welcome_area_image_container .welcome_thumbnail img{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:80%}
 .slider_wrapper .admin_slider_post_select{padding:10px 0}
 .slider_wrapper .admin_slider_post_select label{display:block}
+.slider_wrapper .admin_slider_post_select select{display:block}
 .slider_wrapper .admin_slider_post_type_select{padding:10px 0}
 .slider_wrapper .admin_slider_post_type_select label{display:block}
+.slider_wrapper .admin_slider_post_type_select select{display:block}
 .slider_wrapper .admin_slider_button_text .admin_slider_button_text_div{padding:10px 0;margin-right:20px}
-.slider_wrapper .admin_slider_button_text .admin_slider_button_text_div h2{font-size:18px;font-weight:bold;padding:0}
-.slider_wrapper .admin_slider_button_text .admin_slider_button_text_div .wp-picker-container .button{vertical-align:inherit}
+.slider_wrapper .admin_slider_button_text .admin_slider_button_text_div label{display:block}
 .slider_wrapper .admin_slider_colors{padding:10px 0}
 .slider_wrapper .admin_slider_colors label{display:block}

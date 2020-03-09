@@ -29,5 +29,4 @@ $posts_list =  esc_attr(get_option('posts'));
          }
      ?>
      </select>
-     <input type="text" name="slide_id" value="<?php echo $post->ID; ?>">
 </div>

@@ -23,7 +23,7 @@
                  // $custom_values = get_post_meta($post->ID, $slider_data['slide_class_name']); pr($custom_values);
     ?>
     <!-- Single Welcome Slide -->
-      <div class="single-welcome-slide " style="background-color:<?php echo  $slider_data['color_button'];?>">
+      <div class="single-welcome-slide " style="background-color:<?php echo  $slider_data['color_background'];?>">
           <!-- Background Curve -->
           <div class="background-curve">
               <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-1.png'; ?>" alt="">
