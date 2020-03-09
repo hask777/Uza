@@ -1,29 +1,32 @@
 <?php
 
-
-
-
 function change_button_color()
 {
    $slides = new WP_Query($args = array(
       'post_type' => 'slider'
    ));
+   $ps = $slides->posts;
+   // pr($ps);
 
-   while($slides->have_posts()){
-      $slides->the_post();
-      $id = get_the_ID();
+   foreach($ps as $post){
+      $id = $post->ID;
       $slider_data = get_post_meta($id, 'slider_data', true);
-      $colors = $slider_data['color_button'];
-      pr(gettype($slider_data['color_button']));
+      $colors = array();
+      $colors['slide'] = $slider_data['color_button'];
+      pr(gettype($colors));
+      foreach($colors as $color){
+         pr($color);
+      }
 
-      ?>
-         <style media="screen">
-            .single-welcome-slide .welcome-text h2{
-               color: <?php echo $slider_data['color_button']; ?>;
-               font-size: 82px;
-            }
-         </style>
-      <?
+         ?>
+            <style media="screen">
+            .single-welcome-slide .welcome-text h2 {
+                  color: <?php echo $color; ?>;
+                  font-size: 62px;
+               }
+            </style>
+         <?
    }
+
 }
 add_action('wp_head', 'change_button_color'); ?>

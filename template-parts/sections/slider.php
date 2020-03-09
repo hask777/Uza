@@ -35,7 +35,8 @@
                       <!-- Welcome Text -->
                       <div class="col-12 col-md-6">
                           <div class="welcome-text">
-                              <h2 data-animation="fadeInUp" data-delay="100ms"><?php the_title(); ?></h2>
+                             
+                              <h2 <?php echo $unique_id; ?>data-animation="fadeInUp" data-delay="100ms"><?php the_title(); ?></h2>
                               <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_content(); ?></h5>
                               <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
                               data-animation="fadeInUp" data-delay="700ms"><?php echo $slider_button_text; ?></a>
