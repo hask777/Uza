@@ -36,14 +36,14 @@
                       <!-- Welcome Text -->
                       <div class="col-12 col-md-6">
                           <div class="welcome-text">
-                             <?php $custom_values = $slider_data['slide_class_name'] ?>
+                             <?php $custom_values = $slider_data['slide_class_name']; ?>
                               <h2 id="post-<?php the_ID(); ?>"
                                  <?php post_class($custom_values); ?>
                                  data-animation="fadeInUp"
-                                 data-delay="100ms">
+                                 data-delay="100ms"
+                                 style="color:<?php echo $slider_data['color_title']; ?>"
+                                 >
                                  <?php the_title();
-
-
                                  ?>
                               </h2>
                               <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_content(); ?></h5>

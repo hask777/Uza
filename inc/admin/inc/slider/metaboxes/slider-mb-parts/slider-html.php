@@ -25,7 +25,8 @@
                             <!-- Welcome Text -->
                             <div class="welcome_area_text_container col-md-6">
                                 <div class="welcome_text">
-                                    <h3 class="welcom_text_title" data-animation="fadeInUp" data-delay="100ms">
+                                    <h3 class="welcom_text_title" data-animation="fadeInUp" data-delay="100ms"
+                                    style="color:<?php echo $slider_data['color_title']; ?>">
                                       <?php echo  $post->post_title;?>
                                    </h3>
                                     <h5 data-animation="fadeInUp" data-delay="400ms">
