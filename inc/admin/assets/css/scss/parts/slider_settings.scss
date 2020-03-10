@@ -18,11 +18,17 @@
       }
    }
    .admin_slider_button_text{
+      .admin_slider_setting_div{
+         display: inline-block;
+         width: 45%;
+      }
+
       .trigger{
          border: 1px solid #eee;
          padding: 10px;
          span{
             font-weight: bold;
+            cursor: pointer;
          }
       }
       .admin_slider_button_text_div{

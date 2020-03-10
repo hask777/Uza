@@ -2,16 +2,16 @@
 <!-- ***** Welcome Area Start ***** -->
 <section class="welcome-area" >
   <div class="welcome-slides owl-carousel">
-    <!-- Single Welcome Slide -->
-    <?php
+   <!-- Single Welcome Slide -->
+   <?php
       $args = array(
         'post_type' => 'slider'
       );
       $slider = new WP_Query($args);
 
-        if($slider->have_posts()):
-          while( $slider->have_posts() ):
-            $slider->the_post();
+         if($slider->have_posts()):
+            while( $slider->have_posts() ):
+              $slider->the_post();
 
               $slider_data = get_post_meta($post->ID, 'slider_data', true);
 
@@ -20,7 +20,9 @@
               $slider_button_text =  $slider_data['slider_button_text'];
               $post_url =  get_post_permalink($post_id);
               // pr($slider_data);
-                 // $custom_values = get_post_meta($post->ID, $slider_data['slide_class_name']); pr($custom_values);
+
+
+
     ?>
     <!-- Single Welcome Slide -->
       <div class="single-welcome-slide " style="background-color:<?php echo  $slider_data['color_background'];?>">
@@ -41,12 +43,32 @@
                                  <?php post_class($custom_values); ?>
                                  data-animation="fadeInUp"
                                  data-delay="100ms"
-                                 style="color:<?php echo $slider_data['color_title']; ?>"
+                                 style=
+                                 "color:<?php echo $slider_data['color_title']; ?>;
+                                  font-size:<?php echo $slider_data['title_font_size']; ?>;
+                                  font-style:<?php echo $slider_data['title_font_style']; ?>;
+                                  font-weight:<?php echo $slider_data['title_font_weight']; ?>;
+                                 "
                                  >
+
                                  <?php the_title();
                                  ?>
                               </h2>
-                              <h5 data-animation="fadeInUp" data-delay="400ms"><?php the_content(); ?></h5>
+                              <h5 data-animation="fadeInUp" data-delay="400ms"
+                              >
+                              <style media="screen">
+                                 .single-welcome-slide .welcome-text h5 p{
+                                    color:<?php echo $slider_data['color_description']; ?>;
+                                    font-size:<?php echo $slider_data['desc_font_size']; ?>;
+                                    font-style:<?php echo $slider_data['desc_font_style']; ?>;
+                                    font-weight:<?php echo $slider_data['desc_font_weight']; ?>;
+                                 }
+                              </style>
+                                 <?php;
+                                    the_content();
+                                 ?>
+
+                              </h5>
                               <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
                               data-animation="fadeInUp" data-delay="700ms"><?php echo $slider_button_text; ?></a>
                           </div>
