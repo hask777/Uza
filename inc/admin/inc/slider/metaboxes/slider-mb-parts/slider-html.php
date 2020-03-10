@@ -1,4 +1,4 @@
-
+<div class="col-md-6">
 <!-- ***** Welcome Area Start ***** -->
 <?php
   $slider_data = get_post_meta($post->ID, 'slider_data', true);
@@ -7,7 +7,7 @@
   $post_url =  get_post_permalink($post_id);
   // pr($post_url);
 ?>
-      <section class="welcome-area-admin flex align_vertical align_horizontal">
+   <section class="welcome-area-admin flex align_vertical align_horizontal">
          <div class="admin_slider_bgc">
 
          </div>
@@ -56,4 +56,4 @@
       </section>
 <!-- ***** Welcome Area End ***** -->
 
-</div></div></div></div>
+</div>

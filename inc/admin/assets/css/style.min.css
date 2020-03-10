@@ -21,7 +21,9 @@
 .slider_wrapper .admin_slider_post_type_select{padding:10px 0}
 .slider_wrapper .admin_slider_post_type_select label{display:block}
 .slider_wrapper .admin_slider_post_type_select select{display:block}
-.slider_wrapper .admin_slider_button_text .admin_slider_button_text_div{padding:10px 0;margin-right:20px}
+.slider_wrapper .admin_slider_button_text .trigger{border:1px solid #eee;padding:10px}
+.slider_wrapper .admin_slider_button_text .trigger span{font-weight:bold}
+.slider_wrapper .admin_slider_button_text .admin_slider_button_text_div{padding:10px 10px;margin-right:20px}
 .slider_wrapper .admin_slider_button_text .admin_slider_button_text_div label{display:block}
 .slider_wrapper .admin_slider_colors{padding:10px 0}
 .slider_wrapper .admin_slider_colors label{display:block}

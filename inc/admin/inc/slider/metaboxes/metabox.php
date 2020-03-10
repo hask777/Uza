@@ -21,12 +21,10 @@ function uza_admin_metabox_init(){
                 'post_type' => '',
             );
         }
-
-        require_once 'slider-mb-parts/post-type-loop.php';
-        require_once 'slider-mb-parts/post-loop.php';
-        require_once 'slider-mb-parts/button-text.php';
-        require_once 'slider-mb-parts/slider-color-picker.php';
+        require_once 'slider-mb-parts/start.php';
+        require_once 'slider-mb-parts/menu.php';
         require_once 'slider-mb-parts/slider-html.php';
+        require_once 'slider-mb-parts/end.php';
 
     }
 }

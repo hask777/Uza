@@ -18,9 +18,15 @@
       }
    }
    .admin_slider_button_text{
+      .trigger{
+         border: 1px solid #eee;
+         padding: 10px;
+         span{
+            font-weight: bold;
+         }
+      }
       .admin_slider_button_text_div{
-         // display: inline-block;
-         padding: 10px 0px;
+         padding: 10px 10px;
          margin-right: 20px;
 
          label{

@@ -8,7 +8,7 @@ $posts = new WP_Query($args);
 $posts_list =  esc_attr(get_option('posts'));
 // pr($posts_list);
 ?>
-<div class="admin_slider_post_type_select">
+<div class="admin_slider_button_text">
    <label for="posts"><?php echo __('Выбрать ссылку на пост', 'uza'); ?></label>
      <select class="" name="posts_1">
          <?php
@@ -29,4 +29,5 @@ $posts_list =  esc_attr(get_option('posts'));
          }
      ?>
      </select>
+
 </div>
