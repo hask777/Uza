@@ -11,6 +11,7 @@ function uza_portfolio_rest_api(){
         $portfolio = new WP_Query(array(
             'post_type' => 'portfolio',
             'posts_per_page' => 4,
+            'orderby'        => 'rand',
         ));
 
         $portfolio_fields = array();

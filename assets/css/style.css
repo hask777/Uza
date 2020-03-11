@@ -1156,4 +1156,7 @@ text-shadow: none;
 		font-size: 2em;
 	}
 
-	
+	.flex{
+		display: flex;
+		flex-wrap: wrap;
+	}

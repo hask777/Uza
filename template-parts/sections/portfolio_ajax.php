@@ -17,7 +17,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row uza-portfolio">
+        <div class="row uza-portfolio flex">
 
            <!-- Single Portfolio Item -->
            <?php
@@ -25,7 +25,7 @@
            foreach($portfolio_cats as $port_cat):
 
                 $args = array(
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 2,
                     'post_type' => 'portfolio',
                     'portfolio_cat' => $port_cat->slug,
 
@@ -44,7 +44,7 @@
                                    <!-- Overlay Effect -->
                                    <div class="overlay-effect">
                                        <h4><?php the_title(); ?></h4>
-                                       <p><?php the_content(); ?></p>
+                                       <p><?php the_excerpt(); ?></p>
                                    </div>
                                    <!-- View More -->
                                    <div class="view-more-btn">

@@ -2,26 +2,31 @@
 // ADMIN PAGE
 
 function uza_add_admin_page(){
-    // add_menu_page( 'My Page Title', 'My Page', 'edit_others_posts', 'my_page_slug', 'my_page_function', plugins_url( 'myplugin/images/icon.png' ), 6 );
-    add_menu_page('Uza Theme Options', 'Uza', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page', '', 110);
+   // add_menu_page( 'My Page Title', 'My Page', 'edit_others_posts', 'my_page_slug', 'my_page_function', plugins_url( 'myplugin/images/icon.png' ), 6 );
 
-    // Add sub pages
-    // Uza main page
-    add_submenu_page('uza_main_page', 'Uza Settings', 'Settings', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page');
+   add_menu_page('Uza Theme Options', 'Uza', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page', '', 110);
 
-    // Settings pages
-    add_submenu_page('uza_main_page', 'Uza Slider', 'Slider', 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
+   // Add sub page
+      // Uza main page
+      add_submenu_page('uza_main_page', 'Uza Settings', 'Settings', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page');
 
-    // Portfolio pages
-    add_submenu_page('uza_main_page', 'Uza Portfolio', 'Portfolio', 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');
+      // header seatings page
+      add_submenu_page('uza_main_page', 'Uza Header', 'Header', 'manage_options', 'uza_header_page', 'uza_theme_create_header_page');
 
-    // Activate our custom settings
-    add_action('admin_init', 'uza_custom_settings');
+      // Slider page
+      add_submenu_page('uza_main_page', 'Uza Slider', 'Slider', 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
+
+      // Portfolio page
+      add_submenu_page('uza_main_page', 'Uza Portfolio', 'Portfolio', 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');
+
+      // Activate our custom settings
+      add_action('admin_init', 'uza_custom_settings');
 
 }
 add_action('admin_menu', 'uza_add_admin_page');
 
 require_once 'uza-theme/settings/settings.php';
+require_once 'front.php';
 require_once 'uza-theme/ui/pages-ui.php';
 
 // Create cuatom post type Slider
