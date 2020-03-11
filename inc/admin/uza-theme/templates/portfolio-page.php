@@ -1,4 +1,3 @@
-<h1>Uza Portfolio</h1>
 <?php settings_errors(); ?>
 <form class="" action="options.php" method="post">
     <?php settings_fields('uza-portfolio-settings-group'); ?>
