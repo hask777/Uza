@@ -55,19 +55,15 @@
                                  ?>
                               </h2>
                               <h5 data-animation="fadeInUp" data-delay="400ms"
-                              >
-                              <style media="screen">
-                                 .single-welcome-slide .welcome-text h5 p{
-                                    color:<?php echo $slider_data['color_description']; ?>;
+                                    style="color:<?php echo $slider_data['color_description']; ?>;
                                     font-size:<?php echo $slider_data['desc_font_size']; ?>;
                                     font-style:<?php echo $slider_data['desc_font_style']; ?>;
-                                    font-weight:<?php echo $slider_data['desc_font_weight']; ?>;
-                                 }
-                              </style>
-                                 <?php;
-                                    the_content();
-                                 ?>
+                                    font-weight:<?php echo $slider_data['desc_font_weight']; ?>;">
 
+                                    <?php;
+                                       
+                                       echo $post->post_content;
+                                    ?>
                               </h5>
                               <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
                               data-animation="fadeInUp" data-delay="700ms"><?php echo $slider_button_text; ?></a>

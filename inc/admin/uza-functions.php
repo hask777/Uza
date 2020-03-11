@@ -11,6 +11,9 @@ function uza_add_admin_page(){
     // Settings pages
     add_submenu_page('uza_main_page', 'Uza Slider', 'Slider', 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
 
+    // Settings pages
+    add_submenu_page('uza_main_page', 'Uza Portfolio', 'Portfolio', 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');
+
     // Activate our custom settings
     add_action('admin_init', 'uza_custom_settings');
 

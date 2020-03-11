@@ -13,8 +13,6 @@
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.ico">
 
-    <!-- Core Stylesheet -->
-    <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/style.css'; ?>"> -->
 	<?php wp_head(); ?>
 </head>
 
@@ -56,7 +54,22 @@
                 <nav class="classy-navbar justify-content-between" id="uzaNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="index.html"><img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/logo.png'; ?>" alt=""></a>
+                    <?php
+                 			the_custom_logo();
+                 			if ( is_front_page() && is_home() ) :
+                 				?>
+                 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                 				<?php
+                 			else :
+                 				?>
+                 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                 				<?php
+                 			endif;
+                 			$uza_description = get_bloginfo( 'description', 'display' );
+                 			if ( $uza_description || is_customize_preview() ) :
+                 				?>
+                 				<p class="site-description"><?php echo $uza_description; /* WPCS: xss ok. */ ?></p>
+           			<?php endif; ?>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
