@@ -1,4 +1,13 @@
 .uza_header_options{
    display: block;
 }
-   
+
+.header_image_preview{
+   margin-top: 20px;
+   border: 1px solid #eee;
+   max-width: 30%;
+   img{
+      max-width: inherit;
+   }
+
+}
