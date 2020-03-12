@@ -1160,3 +1160,7 @@ text-shadow: none;
 		display: flex;
 		flex-wrap: wrap;
 	}
+
+	.classy-nav-container .classy-navbar .site-title{
+		margin: 0;
+	}

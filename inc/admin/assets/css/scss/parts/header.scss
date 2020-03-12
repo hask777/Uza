@@ -6,8 +6,9 @@
    margin-top: 20px;
    border: 1px solid #eee;
    max-width: 30%;
+   object-fit: cover;
    img{
       max-width: inherit;
+      object-fit: cover;
    }
-
 }
