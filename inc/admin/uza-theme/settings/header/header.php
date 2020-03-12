@@ -9,6 +9,8 @@ register_setting('uza-header-settings-group', 'color_header_text');
 register_setting('uza-header-settings-group', 'header_text_size');
 register_setting('uza-header-settings-group', 'color_header_logo');
 register_setting('uza-header-settings-group', 'header_logo_size');
+register_setting('uza-header-settings-group', 'header_button_trigger',
+'uza_header_button_init_callback');
 
    add_settings_section('uza-header-section', __('Секция Шапки', 'uza'), 'uza_header_section_callback',
    'uza_header_page');
@@ -26,6 +28,8 @@ register_setting('uza-header-settings-group', 'header_logo_size');
       add_settings_field('header-logo-color-field', __('Установить цвет Логотипа шапки', 'uza'), 'uza_header_logo_color_callback', 'uza_header_page', 'uza-header-section');
 
       add_settings_field('header-logo-size-field', __('Установить размер Логотипа шапки', 'uza'), 'uza_header_logo_size_callback', 'uza_header_page', 'uza-header-section');
+
+      add_settings_field('header-button-field', __('Показывать кнопку в меню', 'uza'), 'uza_header_button_callback', 'uza_header_page', 'uza-header-section');
 
 
 

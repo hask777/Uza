@@ -5,6 +5,11 @@ function uza_header_bgc_init_callback($input){
    // var_dump($input);
 }
 
+function uza_header_button_init_callback($button){
+   return $button;
+   // var_dump($input);
+}
+
 function uza_header_section_callback(){
    echo 'hi';
 }
@@ -88,4 +93,20 @@ function uza_header_logo_size_callback(){
    ?>
       <input type="text" name="header_logo_size" value="<?php echo $header_logo_size; ?>" placeholder="<?php echo __('Размер текста в PX', 'uza'); ?>">
    <?
+}
+
+function uza_header_button_callback(){
+   $header_button_trigger = get_option('header_button_trigger');
+   $button_ops = array(
+      'show' => __('Показывать', 'uza'),
+   );
+
+   $output = '';
+   foreach($button_ops as $ops => $value){
+      $checked = ( @$header_button_trigger[$ops] == 1 ? 'checked' : '' );
+
+      $output .= '<label class="uza_header_options"><input type="checkbox" id="'. $ops .'" name="header_button_trigger['.$ops.']" value="1"'. $checked .'>'.$value.'</label>';
+   }
+
+   echo $output;
 }

@@ -8,7 +8,7 @@ function change_header_bgc_color()
    $header_text_size = esc_attr(get_option('header_text_size'));
    $header_logo_color = esc_attr(get_option('color_header_logo'));
    $header_logo_size = esc_attr(get_option('header_logo_size'));
-
+   $header_button_trigger = get_option('header_button_trigger');
    // pr($header_color);
 
    if(@$options['transparent'] != 1){
@@ -17,8 +17,12 @@ function change_header_bgc_color()
          .header-area{
             background-color: <?php echo $header_color; ?>
          }
+         .header-area .main-header-area.sticky {
+            background-color: <?php echo $header_color; ?>
+         }
       </style>
-   <?}
+   <?
+   }
 
    if(@$header_image){
    ?>
@@ -66,6 +70,16 @@ function change_header_bgc_color()
             .classy-nav-container .classy-navbar .site-title a{
                font-size: <?php echo $header_logo_size; ?>;
 
+            }
+         </style>
+      <?
+   }
+
+   if(@$header_button_trigger['show'] != 1){
+      ?>
+         <style media="screen">
+            .get-a-quote{
+               display: none;
             }
          </style>
       <?
