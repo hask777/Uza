@@ -4,6 +4,7 @@ function change_header_bgc_color()
    $options = get_option('header_bgc_init');
    $header_image = esc_attr(get_option('header_picture'));
    $header_color = esc_attr(get_option('color_header_1'));
+   $header_sticky_color = esc_attr(get_option('color_header_sticky'));
    $header_text_color = esc_attr(get_option('color_header_text'));
    $header_text_size = esc_attr(get_option('header_text_size'));
    $header_logo_color = esc_attr(get_option('color_header_logo'));
@@ -17,8 +18,25 @@ function change_header_bgc_color()
          .header-area{
             background-color: <?php echo $header_color; ?>
          }
+      </style>
+   <?
+   }
+
+   if(@$options['sticky'] != 1){
+   ?>
+      <style media="screen">
          .header-area .main-header-area.sticky {
-            background-color: <?php echo $header_color; ?>
+            opacity: 0;
+         }
+      </style>
+   <?
+   }
+
+   if(@$header_sticky_color){
+   ?>
+      <style media="screen">
+         .header-area .main-header-area.sticky {
+            background-color: <?php echo $header_sticky_color; ?>
          }
       </style>
    <?
