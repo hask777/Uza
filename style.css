@@ -2087,4 +2087,12 @@ input:focus {
     height: 110px;
     padding: 20px; }
 
+   .single-service-area:focus .service-icon, .single-service-area:hover .service-icon   {
+		background-color: #fff;
+      box-shadow: none;
+	}
+   .single-service-area .service-icon {
+      background-color: #fff;
+   }
+
 /*# sourceMappingURL=style.css.map */

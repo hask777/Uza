@@ -4,20 +4,23 @@
 function uza_add_admin_page(){
    // add_menu_page( 'My Page Title', 'My Page', 'edit_others_posts', 'my_page_slug', 'my_page_function', plugins_url( 'myplugin/images/icon.png' ), 6 );
 
-   add_menu_page('Uza Theme Options', 'Uza', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page', '', 110);
+   add_menu_page('Uza Theme Options', __('Тема', 'uza'), 'manage_options', 'uza_main_page', 'uza_theme_create_main_page', '', 110);
 
    // Add sub page
       // Uza main page
-      add_submenu_page('uza_main_page', 'Uza Settings', 'Settings', 'manage_options', 'uza_main_page', 'uza_theme_create_main_page');
+      add_submenu_page('uza_main_page', 'Uza Settings', __('Настройка', 'uza'), 'manage_options', 'uza_main_page', 'uza_theme_create_main_page');
 
       // header seatings page
-      add_submenu_page('uza_main_page', 'Uza Header', 'Header', 'manage_options', 'uza_header_page', 'uza_theme_create_header_page');
+      add_submenu_page('uza_main_page', 'Uza Header', __('Шапка', 'uza'), 'manage_options', 'uza_header_page', 'uza_theme_create_header_page');
 
       // Slider page
-      add_submenu_page('uza_main_page', 'Uza Slider', 'Slider', 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
+      add_submenu_page('uza_main_page', 'Uza Slider', __('Слайдер', 'uza'), 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
+
+      // Services page
+      add_submenu_page('uza_main_page', 'Uza Services', __('Сервисы', 'uza'), 'manage_options', 'uza_service_page', 'uza_theme_create_service_page');
 
       // Portfolio page
-      add_submenu_page('uza_main_page', 'Uza Portfolio', 'Portfolio', 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');
+      add_submenu_page('uza_main_page', 'Uza Portfolio', __('Портфолио', 'uza'), 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');
 
       // Activate our custom settings
       add_action('admin_init', 'uza_custom_settings');
