@@ -7,7 +7,7 @@
 <!-- ***** About Us Area End ***** -->
 
 <!-- ***** Services Area Start ***** -->
-<!-- <?php //get_template_part('template-parts/sections/services'); ?>     -->
+<?php get_template_part('template-parts/sections/services'); ?>    
 <!-- ***** Services Area End ***** -->
 
 <!-- ***** Portfolio Area Start ***** -->

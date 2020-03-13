@@ -10,42 +10,29 @@
         </div>
 
         <div class="row">
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-lg-4">
-                <div class="single-service-area mb-80">
-                    <!-- Service Icon -->
-                    <div class="service-icon">
-                        <i class="icon_cone_alt"></i>
-                    </div>
-                    <h5>Business Strategy</h5>
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                </div>
-            </div>
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-lg-4">
-                <div class="single-service-area mb-80">
-                    <!-- Service Icon -->
-                    <div class="service-icon">
-                        <i class="icon_piechart"></i>
-                    </div>
-                    <h5>Market Analytics</h5>
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                </div>
-            </div>
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-lg-4">
-                <div class="single-service-area mb-80">
-                    <!-- Service Icon -->
-                    <div class="service-icon">
-                        <i class="icon_easel"></i>
-                    </div>
-                    <h5>Marketing Social</h5>
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                </div>
-            </div>
+           <?php
+           $args = array(
+             'post_type' => 'service'
+            );
+            $services = new WP_Query($args);
+               while($services->have_posts()){
+                  $services->the_post();
+                  ?>
+                  <!-- Single Service Area -->
+                  <div class="col-12 col-lg-4">
+                      <div class="single-service-area mb-80">
+                          <!-- Service Icon -->
+                          <div class="service-icon">
+                             <?php the_post_thumbnail(); ?>
+                              <!-- <i class="icon_cone_alt"></i> -->
+                          </div>
+                          <h5><?php the_title() ?></h5>
+                          <p><?php the_excerpt() ?></p>
+                      </div>
+                  </div>
+                  <?
+               }
+           ?>
 
         </div>
     </div>

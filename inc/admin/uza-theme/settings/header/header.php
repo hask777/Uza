@@ -8,8 +8,11 @@ register_setting('uza-header-settings-group', 'color_header_sticky');
 register_setting('uza-header-settings-group', 'header_picture');
 register_setting('uza-header-settings-group', 'color_header_text');
 register_setting('uza-header-settings-group', 'header_text_size');
+register_setting('uza-header-settings-group', 'header_text_weight');
 register_setting('uza-header-settings-group', 'color_header_logo');
 register_setting('uza-header-settings-group', 'header_logo_size');
+register_setting('uza-header-settings-group', 'color_header_dropdown_bgc');
+register_setting('uza-header-settings-group', 'color_header_dropdown_text');
 register_setting('uza-header-settings-group', 'header_button_trigger',
 'uza_header_button_init_callback');
 
@@ -28,9 +31,15 @@ register_setting('uza-header-settings-group', 'header_button_trigger',
 
       add_settings_field('header-text-size-field', __('Установить размер текста шапки', 'uza'), 'uza_header_size_color_callback', 'uza_header_page', 'uza-header-section');
 
+      add_settings_field('header-text-weight-field', __('Установить размер текста шапки', 'uza'), 'uza_header_text_weight_callback', 'uza_header_page', 'uza-header-section');
+
       add_settings_field('header-logo-color-field', __('Установить цвет Логотипа шапки', 'uza'), 'uza_header_logo_color_callback', 'uza_header_page', 'uza-header-section');
 
       add_settings_field('header-logo-size-field', __('Установить размер Логотипа шапки', 'uza'), 'uza_header_logo_size_callback', 'uza_header_page', 'uza-header-section');
+
+      add_settings_field('header-dropdown-field', __('Установить цвет выподающего меню шапки', 'uza'), 'uza_header_dropdown_callback', 'uza_header_page', 'uza-header-section');
+
+      add_settings_field('header-dropdown-text-field', __('Установить цвет текста выподающего меню шапки', 'uza'), 'uza_header_dropdown_text_callback', 'uza_header_page', 'uza-header-section');
 
       add_settings_field('header-button-field', __('Показывать кнопку в меню', 'uza'), 'uza_header_button_callback', 'uza_header_page', 'uza-header-section');
 

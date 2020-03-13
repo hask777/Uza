@@ -10,6 +10,7 @@ function change_header_bgc_color()
    $header_logo_color = esc_attr(get_option('color_header_logo'));
    $header_logo_size = esc_attr(get_option('header_logo_size'));
    $header_button_trigger = get_option('header_button_trigger');
+   $header_text_weight = esc_attr(get_option('header_text_weight'));
    // pr($header_color);
 
    if(@$options['transparent'] != 1){
@@ -27,6 +28,16 @@ function change_header_bgc_color()
       <style media="screen">
          .header-area .main-header-area.sticky {
             opacity: 0;
+         }
+      </style>
+   <?
+   }
+
+   if(@$options['auth'] != 1){
+   ?>
+      <style media="screen">
+         .login-register-btn {
+            display: none;
          }
       </style>
    <?
@@ -57,6 +68,26 @@ function change_header_bgc_color()
          <style media="screen">
             .classy-nav-container .classy-navbar .classynav ul li a{
                color: <?php echo $header_text_color; ?>;
+            }
+            .header-area .search-icon i{
+               color: <?php echo $header_text_color; ?>;
+            }
+            .classynav ul li.has-down > a::after, .classynav ul li.has-down.active > a::after, .classynav ul li.megamenu-item > a::after{
+               color: <?php echo $header_text_color; ?>;
+            }
+            .classy-nav-container .classy-navbar .classynav ul li.current-item a::after {
+               background-color: <?php echo $header_text_color; ?>;
+            }
+         </style>
+      <?
+   }
+
+
+   if(@$header_text_weight){
+      ?>
+         <style media="screen">
+            .classy-nav-container .classy-navbar .classynav ul li a{
+               font-weight: <?php echo $header_text_weight; ?>;
             }
          </style>
       <?
@@ -102,6 +133,32 @@ function change_header_bgc_color()
          </style>
       <?
    }
+
+   $dropdown_color = esc_attr(get_option('color_header_dropdown_bgc'));
+   $dropdown_text = esc_attr(get_option('color_header_dropdown_text'));
+
+   if(@$dropdown_color){
+      ?>
+         <style media="screen">
+            .breakpoint-off .classynav ul li .dropdown{
+               background-color: <?php echo  $dropdown_color;?>;
+            }
+         </style>
+      <?
+   }
+
+
+      if(@$dropdown_text){
+         ?>
+            <style media="screen">
+               .classy-nav-container .classy-navbar .classynav .dropdown li a  {
+                  color: <?php echo  $dropdown_text;?>;
+               }
+            </style>
+         <?
+      }
+
+
 
 }
 add_action('wp_head', 'change_header_bgc_color');
