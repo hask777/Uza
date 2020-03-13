@@ -1,10 +1,12 @@
 <div class="col-md-6">
 <!-- ***** Welcome Area Start ***** -->
 <?php
-  $slider_data = get_post_meta($post->ID, 'slider_data', true);
-  $post_id = $slider_data['posts_1'];
-  $button_text = $slider_data['slider_button_text'];
-  $post_url =  get_post_permalink($post_id);
+   $slider_data = get_post_meta($post->ID, 'slider_data', true);
+   $post_id = $slider_data['posts_1'];
+   $button_text = $slider_data['slider_button_text'];
+   $slider_button_collor =  $slider_data['color_button'];
+   $slider_button_text_color = $slider_data['color_slider_button_text'];
+   $post_url =  get_post_permalink($post_id);
   // pr($post_url);
 ?>
    <section class="welcome-area-admin flex align_vertical align_horizontal">
@@ -26,13 +28,27 @@
                             <div class="welcome_area_text_container col-md-6">
                                 <div class="welcome_text">
                                     <h3 class="welcom_text_title" data-animation="fadeInUp" data-delay="100ms"
-                                    style="color:<?php echo $slider_data['color_title']; ?>">
+                                    style="
+                                      color:<?php echo $slider_data['color_title']; ?>;
+                                      font-style:<?php echo $slider_data['title_font_style']; ?>;
+                                      font-weight:<?php echo $slider_data['title_font_weight']; ?>;
+                                    "
+                                    >
                                       <?php echo  $post->post_title;?>
                                    </h3>
-                                    <h5 data-animation="fadeInUp" data-delay="400ms">
+                                    <h5 data-animation="fadeInUp" data-delay="400ms"
+                                    style="
+                                       color:<?php echo   $slider_data['color_description']; ?>;
+                                       font-style:<?php echo $slider_data['desc_font_style']; ?>;
+                                       font-weight:<?php echo $slider_data['desc_font_weight']; ?>;">
                                       <?php echo $post->post_content; ?>
                                     </h5>
-                                    <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2 " data-animation="fadeInUp" data-delay="700ms"><span>
+                                    <a href="<?php echo $post_url;?>"
+                                       style="
+                                        background-color: <?php echo $slider_button_collor; ?>;
+                                        color: <?php echo $slider_button_text_color;?>;
+                                       "
+                                       class="btn uza-btn btn-2 " data-animation="fadeInUp" data-delay="700ms"><span>
                                        <?php echo $button_text; ?></span></a>
                                 </div>
                             </div>

@@ -15,7 +15,7 @@ function uza_theme_create_slider_page(){
     require_once (get_template_directory() . '/inc/admin/uza-theme/templates/slider-page.php');
 }
 
-function uza_theme_create_service_page(){
+function uza_theme_create_services_page(){
     require_once (get_template_directory() . '/inc/admin/uza-theme/templates/service-page.php');
 }
 

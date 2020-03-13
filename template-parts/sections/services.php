@@ -4,7 +4,7 @@
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Our Services</h2>
+                    <h2><?php echo $service_title = esc_attr(get_option('service_title')); ?></h2>
                 </div>
             </div>
         </div>
@@ -12,14 +12,14 @@
         <div class="row">
            <?php
            $args = array(
-             'post_type' => 'service'
+             'post_type' => 'service_post_type'
             );
             $services = new WP_Query($args);
                while($services->have_posts()){
                   $services->the_post();
                   ?>
                   <!-- Single Service Area -->
-                  <div class="col-12 col-lg-4">
+                  <div class="col-12 col-lg-2 col-md-4 col-sm-6">
                       <div class="single-service-area mb-80">
                           <!-- Service Icon -->
                           <div class="service-icon">

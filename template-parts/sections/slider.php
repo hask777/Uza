@@ -9,19 +9,21 @@
       );
       $slider = new WP_Query($args);
 
-         if($slider->have_posts()):
-            while( $slider->have_posts() ):
-              $slider->the_post();
+      if($slider->have_posts()):
+         while( $slider->have_posts() ):
+            $slider->the_post();
 
-              $slider_data = get_post_meta($post->ID, 'slider_data', true);
+            $slider_data = get_post_meta($post->ID, 'slider_data', true);
 
-              $post_id = $slider_data['posts_1'];
-              $slider_button_collor =  $slider_data['color_button'];
-              $slider_button_text =  $slider_data['slider_button_text'];
-              $post_url =  get_post_permalink($post_id);
-              // pr($slider_data);
-
-
+            $post_id = $slider_data['posts_1'];
+            $slider_button_collor =  $slider_data['color_button'];
+            $slider_button_text =  $slider_data['slider_button_text'];
+            $slider_button_text_color = $slider_data['color_slider_button_text'];
+            $slider_button_text_weight = $slider_data['button_font_weight'];
+            $slider_button_text_style = $slider_data['button_font_style'];
+            $slider_button_text_size = $slider_data['button_font_size'];
+            $post_url =  get_post_permalink($post_id);
+            // pr($slider_data);
 
     ?>
     <!-- Single Welcome Slide -->
@@ -50,7 +52,6 @@
                                   font-weight:<?php echo $slider_data['title_font_weight']; ?>;
                                  "
                                  >
-
                                  <?php the_title();
                                  ?>
                               </h2>
@@ -59,13 +60,18 @@
                                     font-size:<?php echo $slider_data['desc_font_size']; ?>;
                                     font-style:<?php echo $slider_data['desc_font_style']; ?>;
                                     font-weight:<?php echo $slider_data['desc_font_weight']; ?>;">
-
                                     <?php;
-                                       
                                        echo $post->post_content;
                                     ?>
                               </h5>
                               <a href="<?php echo $post_url;?>" class="btn uza-btn btn-2"
+                                 style="
+                                  background-color: <?php echo $slider_button_collor; ?>;
+                                  color: <?php echo $slider_button_text_color;?>;
+                                  font-size: <?php echo $slider_button_text_size;?>;
+                                  font-weight: <?php echo $slider_button_text_weight;?>;
+                                  font-style: <?php echo $slider_button_text_style;?>;
+                                 "
                               data-animation="fadeInUp" data-delay="700ms"><?php echo $slider_button_text; ?></a>
                           </div>
                       </div>

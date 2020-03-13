@@ -16,8 +16,8 @@ function uza_add_admin_page(){
       // Slider page
       add_submenu_page('uza_main_page', 'Uza Slider', __('Слайдер', 'uza'), 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
 
-      // Services page
-      add_submenu_page('uza_main_page', 'Uza Services', __('Сервисы', 'uza'), 'manage_options', 'uza_service_page', 'uza_theme_create_service_page');
+      add_submenu_page('uza_main_page', 'Uza Services', __('Сервисы', 'uza'), 'manage_options',
+      'uza_services_page', 'uza_theme_create_services_page');
 
       // Portfolio page
       add_submenu_page('uza_main_page', 'Uza Portfolio', __('Портфолио', 'uza'), 'manage_options', 'uza_portfolio_page', 'uza_theme_create_portfolio_page');

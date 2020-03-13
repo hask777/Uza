@@ -2,7 +2,6 @@
 
 function uza_custom_settings(){
 
-
    require 'main/main.php';
    require 'header/header.php';
    require 'slider/slider.php';
