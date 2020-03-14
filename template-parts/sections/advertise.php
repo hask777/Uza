@@ -2,13 +2,14 @@
 <?php
    $advertis_bgc = esc_attr(get_option('color_advertis_bgc'));
    $advertis_image = esc_attr(get_option('advertis_image'));
+
 ?>
 <section class="advertis_section">
    <div class="uza-cta-area section-padding-0-80">
    <div class="advertis_bgc_image">
       <img src="<?php echo $advertis_image; ?>" alt="" >
    </div>
-   <div class="advertis_bgc" style="<?php echo $advertis_bgc; ?>">
+   <div class="advertis_bgc">
 
    </div>
 
