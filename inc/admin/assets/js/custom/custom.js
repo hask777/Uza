@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 	var mediaUploader;
 	var attachment;
 
-	$('#upload-header-img').on('click', function(e){
+	$('#upload-header-img, #upload-advertis-img').on('click', function(e){
 		e.preventDefault();
 		if(mediaUploader){
 			mediaUploader.open();
@@ -29,8 +29,8 @@ jQuery(document).ready(function($){
 		mediaUploader.on('select', function(){
 			attachment = mediaUploader.state().get('selection').first().toJSON();
 			console.log(attachment);
-			$('#header-input').val(attachment.url);
-			$('#header_image_preview img').attr('src', attachment.url);
+			$('#header-input, #advertis-input').val(attachment.url);
+			$('#header_image_preview img', '#advertis_image_preview').attr('src', attachment.url);
 		});
 
 		mediaUploader.open();
