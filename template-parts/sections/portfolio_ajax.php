@@ -38,7 +38,7 @@
                         $all->the_post();
                         ?>
                         <!-- Single Portfolio Item -->
-                           <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item <?php echo $port_cat->slug; ?>">
+                           <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item flex <?php echo $port_cat->slug; ?>">
                               <div class="single-portfolio-slide">
                                    <?php the_post_thumbnail(); ?>
                                    <!-- Overlay Effect -->

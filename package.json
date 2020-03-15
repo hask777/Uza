@@ -41,7 +41,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "start": "gulp",
+    "start": "webpack",
     "styles": "gulp styles",
     "stylesRTL": "gulp stylesRTL",
     "vendorsJS": "gulp vendorsJS",
@@ -49,5 +49,8 @@
     "images": "gulp images",
     "clearCache": "gulp clearCache",
     "translate": "gulp translate"
+  },
+  "dependencies": {
+    "jquery-match-height": "^0.7.2"
   }
 }

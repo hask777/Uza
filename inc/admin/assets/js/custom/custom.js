@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+
    // Slider Post type menu handler
 	$('.admin_slider_button_text_div').hide();
    $('.trigger').on('click', function(e){
@@ -52,5 +53,7 @@ jQuery(document).ready(function($){
 	var headerImage = new MediaUploader('#upload-header-img', '#header-input', '#header_image_preview img');
 
 	var advertiseImage = new MediaUploader('#upload-advertis-img', '#advertis-input', '#advertis_image_preview img');
+
+
 
 });

@@ -33,21 +33,22 @@
                		$blog_post->the_post();
                      ?>
                      <!-- Single Blog Post -->
-                     <div class="col-12 col-lg-4">
+                     <div class="col-12 col-lg-4 blog_item_1 flex">
                           <div class="single-blog-post bg-img mb-80">
                              <div class="single_blog_post_image">
                                 <?php the_post_thumbnail(); ?>
                              </div>
 
-                              <!-- Post Content -->
+
                               <div class="post-content">
-                                  <span class="post-date"><span>23</span><?php the_date(); ?></span>
+                                  <span class="post-date"><?php the_date(); ?></span>
                                   <a href="#" class="post-title"><?php the_title(); ?></a>
                                   <p><?php the_excerpt(); ?></p>
                                   <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
                               </div>
                           </div>
                      </div>
+
                      <?
                      wp_reset_postdata();
                	}

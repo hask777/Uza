@@ -2147,8 +2147,8 @@ input:focus {
       overflow: hidden;
    }
 
-   .uza-blog-area .single-blog-post .post-content{
 
-   }
+ .news_1_item { list-style: none; padding-left: 7.5px; padding-right: 7.5px; border: 1px solid #fff; }
+
 
 /*# sourceMappingURL=style.css.map */
