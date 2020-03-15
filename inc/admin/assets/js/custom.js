@@ -10,55 +10,40 @@ jQuery(document).ready(function ($) {
 
   var mediaUploader;
   var attachment;
-  $('#upload-header-img').on('click', function (e) {
-    e.preventDefault();
 
-    if (mediaUploader) {
+  var MediaUploader = function MediaUploader(button, input, preview) {
+    this.triggerButton = button;
+    this.triggerInput = input;
+    this.imagePreview = preview;
+  };
+
+  MediaUploader.prototype.uploadImage = function () {
+    $(this.triggerButton).on('click', function (e) {
+      e.preventDefault();
+
+      if (mediaUploader) {
+        mediaUploader.open();
+        return;
+      }
+
+      mediaUploader = wp.media.frames.file_frame = wp.media({
+        title: 'Choose a Profile Picture',
+        button: {
+          text: 'Choose Picture'
+        },
+        multiple: false
+      });
+      mediaUploader.on('select', function () {
+        attachment = mediaUploader.state().get('selection').first().toJSON(); // console.log(attachment);
+
+        $(this.triggerInput).val(attachment.url);
+        $(this.imagePreview).attr('src', attachment.url);
+      });
       mediaUploader.open();
-      return;
-    }
+    });
+  };
 
-    mediaUploader = wp.media.frames.file_frame = wp.media({
-      title: 'Choose a Profile Picture',
-      button: {
-        text: 'Choose Picture'
-      },
-      multiple: false
-    });
-    mediaUploader.on('select', function () {
-      attachment = mediaUploader.state().get('selection').first().toJSON();
-      console.log(attachment);
-      $('#header-input').val(attachment.url);
-      $('#header_image_preview img').attr('src', attachment.url);
-    });
-    mediaUploader.open();
-  }); // Image uploader Header 1
-  // var mediaUploader;
-  // var attachment;
-  //
-  // $('#upload-header-img, #upload-advertis-img').on('click', function(e){
-  // 	e.preventDefault();
-  // 	if(mediaUploader){
-  // 		mediaUploader.open();
-  // 		return;
-  // 	}
-  //
-  // 	mediaUploader = wp.media.frames.file_frame = wp.media({
-  // 		title: 'Choose a Profile Picture',
-  // 		button: {
-  // 			text: 'Choose Picture'
-  // 		},
-  // 		multiple: false,
-  // 	});
-  //
-  // 	mediaUploader.on('select', function(){
-  // 		attachment = mediaUploader.state().get('selection').first().toJSON();
-  // 		console.log(attachment);
-  // 		$('#header-input, #advertis-input').val(attachment.url);
-  // 		$('#header_image_preview img').attr('src', attachment.url);
-  // 		$('#advertis_image_preview').attr('src', attachment.url);
-  // 	});
-  //
-  // 	mediaUploader.open();
-  // });
+  var mu = new MediaUploader('#upload-header-img', '#header-input', '#header_image_preview img');
+  mu.uploadImage(); // console.log(this.triggerInput);
 });
+"use strict";
