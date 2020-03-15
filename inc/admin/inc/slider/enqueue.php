@@ -11,7 +11,7 @@ function uza_admin_scripts_enqueue(){
 
    // SCRIPTS
    wp_enqueue_media();
-   wp_register_script( 'custom_wp_admin_js',  get_template_directory_uri() . '/inc/admin/assets/js/custom.min.js', array(), '1.0.0' );
+   wp_register_script( 'custom_wp_admin_js',  get_template_directory_uri() . '/inc/admin/assets/js/custom/bundle.js', array(), '1.0.0' );
    wp_register_script( 'vendor_wp_admin_js',  get_template_directory_uri() . '/inc/admin/assets/js/vendor.js', array(), '1.0.0' );
 
    wp_enqueue_script( 'custom_wp_admin_js' );

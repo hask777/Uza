@@ -11,48 +11,46 @@ jQuery(document).ready(function($){
 	var mediaUploader;
 	var attachment;
 
-	var MediaUploader = function(button, input, preview){
+	class MediaUploader{
+		constructor(button, input, preview){
+			this.triggerButton = $(button);
+			this.triggerInput = $(input);
+			this.imagePreview = $(preview);
+			this.mediaUploader = wp.media.frames.file_frame = wp.media({
+					title: 'Choose a Profile Picture',
+					button: {
+						text: 'Choose Picture'
+					},
+						multiple: false,
+				});
+			this.uploadImage();
+		}
 
-		this.triggerButton = button;
-		this.triggerInput = input;
-		this.imagePreview = preview;
+		uploadImage(){
+			this.triggerButton.on('click', this.startUpload.bind(this));
+			this.mediaUploader.on('select', this.endUpload.bind(this));
+		}
 
-	}
-
-	MediaUploader.prototype.uploadImage = function(){
-
-		$(this.triggerButton).on('click', function(e){
-
-			e.preventDefault();
-			if(mediaUploader){
-				mediaUploader.open();
-				return;
+		startUpload(e){
+			if(this.mediaUploader){
+				this.mediaUploader.open();
+					return;
 			}
+		}
 
-			mediaUploader = wp.media.frames.file_frame = wp.media({
-				title: 'Choose a Profile Picture',
-				button: {
-					text: 'Choose Picture'
-				},
-				multiple: false,
-			});
+		endUpload(){
+				this.attachment = this.mediaUploader.state().get('selection').first().toJSON();
 
-			mediaUploader.on('select', function(){
-				attachment = mediaUploader.state().get('selection').first().toJSON();
-				// console.log(attachment);
-				$(this.triggerInput).val(attachment.url);
-				$(this.imagePreview).attr('src', attachment.url);
-
-			});
+				this.triggerInput.val(this.attachment.url);
+				this.imagePreview.attr('src', this.attachment.url);
+				console.log(this.triggerInput);
 
 			mediaUploader.open();
-
-		});
-
+		}
 	}
 
-	var mu = new MediaUploader('#upload-header-img', '#header-input', '#header_image_preview img');
-	mu.uploadImage();
-	// console.log(this.triggerInput);
+	var headerImage = new MediaUploader('#upload-header-img', '#header-input', '#header_image_preview img');
+
+	var advertiseImage = new MediaUploader('#upload-advertis-img', '#advertis-input', '#advertis_image_preview img');
 
 });

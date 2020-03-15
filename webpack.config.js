@@ -7,6 +7,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'inc/admin/assets/js/custom/'),
   },
+  module: {
+     rules: [
+        { test: /\.txt$/, use: 'raw-loader' }
+     ]
+},
   watch: true,
 
 };
