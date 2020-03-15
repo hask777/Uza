@@ -154,6 +154,14 @@ function uza_advertising_bgc_callback(){
    <?
 }
 
+function uza_advertising_bgc_opacity_callback(){
+   $advertis_opacity_bgc = esc_attr(get_option('advertis_bgc_opacity'));
+   ?>
+      <input type="text" name="advertis_bgc_opacity" value="<?php echo $advertis_opacity_bgc; ?>"
+      placeholder="<?php echo __('0.0','uza'); ?>">
+   <?
+}
+
 function uza_advertising_image_callback(){
    $advertis_image = esc_attr(get_option('advertis_image'));
    ?>

@@ -21,6 +21,7 @@ register_setting('uza-advertising-settings-group', 'advertis_phone_text_size');
 register_setting('uza-advertising-settings-group', 'advertis_phone_text_style');
 // Backgroubd
 register_setting('uza-advertising-settings-group', 'color_advertis_bgc');
+register_setting('uza-advertising-settings-group', 'advertis_bgc_opacity');
 register_setting('uza-advertising-settings-group', 'advertis_image');
 
    add_settings_section('uza-advertising-section', __('Секция рекламы', 'uza'), 'uza_advertising_section_callback',
@@ -53,12 +54,13 @@ register_setting('uza-advertising-settings-group', 'advertis_image');
 
       add_settings_field('header-advertising-phone-style-field', __('Стиль текста номера телефона', 'uza'), 'uza_advertising_phone_style_callback', 'uza_advertising_page', 'uza-advertising-section');
 
-
+      // Additional text
       add_settings_field('header-advertising-addtext-field', __('Дополнительный текст', 'uza'), 'uza_advertising_addtext_callback', 'uza_advertising_page', 'uza-advertising-section');
-
 
       // Bgc
       add_settings_field('header-advertising-bgc-field', __('Цвет фона', 'uza'), 'uza_advertising_bgc_callback', 'uza_advertising_page', 'uza-advertising-section');
+
+      add_settings_field('header-advertising-bgc-opacity-field', __('Прозрачность фона', 'uza'), 'uza_advertising_bgc_opacity_callback', 'uza_advertising_page', 'uza-advertising-section');
 
       // Image
       add_settings_field('header-advertising-image-field', __('Фоновое изображение', 'uza'), 'uza_advertising_image_callback', 'uza_advertising_page', 'uza-advertising-section');

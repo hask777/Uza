@@ -9,6 +9,10 @@ $advertis_description_color =  esc_attr(get_option('color_advertis_description')
 $advertis_description_size = esc_attr(get_option('advertis_description_size'));
 $advertis_description_style = esc_attr(get_option('advertis_description_style'));
 
+$phone_number_color = esc_attr(get_option('color_advertis_phone_number'));
+$advertis_phone_text_size = esc_attr(get_option('advertis_phone_text_size'));
+$advertis_phone_text_style= esc_attr(get_option('advertis_phone_text_style'));
+
 $advertis_bgc = esc_attr(get_option('color_advertis_bgc'));
 
    ?>
@@ -27,7 +31,13 @@ $advertis_bgc = esc_attr(get_option('color_advertis_bgc'));
 
          .advertis_section .advertis_bgc{
             background-color: <?php echo $advertis_bgc = esc_attr(get_option('color_advertis_bgc')); ?>;
-            opacity: 0.7;
+            opacity: <?php echo $advertis_opacity_bgc = esc_attr(get_option('advertis_bgc_opacity')); ?>;
+         }
+
+         .cta-content .call-now-btn a{
+            color: <?php  echo $phone_number_color;?>;
+            font-size: <?php echo $advertis_phone_text_size; ?>;
+            font-style: <?php echo $advertis_phone_text_style; ?>;
          }
       </style>
    <?
