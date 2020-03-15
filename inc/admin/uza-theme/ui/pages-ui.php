@@ -31,3 +31,11 @@ function uza_theme_create_advertising_page(){
 function uza_theme_create_blog_page(){
     require_once (get_template_directory() . '/inc/admin/uza-theme/templates/blog-page.php');
 }
+
+function uza_theme_create_newsletter_page(){
+    require_once (get_template_directory() . '/inc/admin/uza-theme/templates/newsletter-page.php');
+}
+
+function uza_theme_create_footer_page(){
+    require_once (get_template_directory() . '/inc/admin/uza-theme/templates/footer-page.php');
+}

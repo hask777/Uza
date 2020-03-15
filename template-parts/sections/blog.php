@@ -4,59 +4,55 @@
         <img src="<?php echo get_template_directory_uri() .'/assets/img/core-img/curve-4.png';?>" alt="">
     </div>
 
-   
+   <?php
+      $blog_title = esc_attr(get_option('blog_title'));
+      $blog_description = esc_attr(get_option('blog_description'));
+   ?>
 
     <div class="container">
         <div class="row">
            <!-- Section Heading -->
            <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Our Latest Blogs</h2>
-                    <p>Hit the button below or give us a call!</p>
+                    <h2><?php echo $blog_title; ?></h2>
+                    <p><?php echo $blog_description; ?></p>
                 </div>
            </div>
         </div>
 
-        <div class="row">
+        <div class="row flex">
+            <?php
 
-           <!-- Single Blog Post -->
-           <div class="col-12 col-lg-4">
-                <div class="single-blog-post bg-img mb-80" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/bg-img/8.jpg'; ?>);">
-                    <!-- Post Content -->
-                    <div class="post-content">
-                        <span class="post-date"><span>23</span> August, 2018</span>
-                        <a href="#" class="post-title">SEO: The Movie By Ignite Visibility</a>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                        <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
-                    </div>
-                </div>
-           </div>
+               $blog_post = new WP_query(array(
+                  'poat_type' => 'post',
+                  'posts_per_page' => 3
+               ));
 
-           <!-- Single Blog Post -->
-           <div class="col-12 col-lg-4">
-                <div class="single-blog-post bg-img mb-80" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/bg-img/9.jpg'; ?>);">
-                    <!-- Post Content -->
-                    <div class="post-content">
-                        <span class="post-date"><span>13</span> December, 2018</span>
-                        <a href="#" class="post-title">What Curling Irons Are The Best Ones</a>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                        <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
-                    </div>
-                </div>
-           </div>
+               if ( $blog_post->have_posts() ) {
+               	while ( $blog_post->have_posts() ) {
+               		$blog_post->the_post();
+                     ?>
+                     <!-- Single Blog Post -->
+                     <div class="col-12 col-lg-4">
+                          <div class="single-blog-post bg-img mb-80">
+                             <div class="single_blog_post_image">
+                                <?php the_post_thumbnail(); ?>
+                             </div>
 
-           <!-- Single Blog Post -->
-           <div class="col-12 col-lg-4">
-                <div class="single-blog-post bg-img mb-80" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/bg-img/10.jpg'; ?>);">
-                    <!-- Post Content -->
-                    <div class="post-content">
-                        <span class="post-date"><span>08</span> July, 2018</span>
-                        <a href="#" class="post-title">Amazon REV Workshop: Road to Seattle</a>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                        <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
-                    </div>
-                </div>
-           </div>
+                              <!-- Post Content -->
+                              <div class="post-content">
+                                  <span class="post-date"><span>23</span><?php the_date(); ?></span>
+                                  <a href="#" class="post-title"><?php the_title(); ?></a>
+                                  <p><?php the_excerpt(); ?></p>
+                                  <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
+                              </div>
+                          </div>
+                     </div>
+                     <?
+                     wp_reset_postdata();
+               	}
+               }
+            ?>
 
         </div>
     </div>

@@ -8,6 +8,7 @@ function uza_custom_settings(){
    require 'service/service.php';
    require 'portfolio/portfolio.php';
    require 'advertising/advertising.php';
+   require 'blog/blog.php';
 }
 
 require 'main/functions/main.php';
@@ -16,3 +17,4 @@ require 'slider/functions/slider.php';
 require 'service/functions/service.php';
 require 'portfolio/functions/portfolio.php';
 require 'advertising/functions/advertising.php';
+require 'blog/functions/blog.php';

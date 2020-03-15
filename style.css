@@ -2137,4 +2137,18 @@ input:focus {
       margin-right: 20px;
    }
 
+   .uza-blog-area .single-blog-post{
+      background-color: #fff;
+      padding: 10px;
+   }
+
+   .uza-blog-area .single-blog-post .single_blog_post_image{
+      max-height: 180px;
+      overflow: hidden;
+   }
+
+   .uza-blog-area .single-blog-post .post-content{
+
+   }
+
 /*# sourceMappingURL=style.css.map */

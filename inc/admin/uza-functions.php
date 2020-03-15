@@ -16,6 +16,7 @@ function uza_add_admin_page(){
       // Slider page
       add_submenu_page('uza_main_page', 'Uza Slider', __('Слайдер', 'uza'), 'manage_options', 'uza_slider_page', 'uza_theme_create_slider_page');
 
+      // Uza Service page
       add_submenu_page('uza_main_page', 'Uza Services', __('Сервисы', 'uza'), 'manage_options',
       'uza_services_page', 'uza_theme_create_services_page');
 
@@ -27,6 +28,12 @@ function uza_add_admin_page(){
 
       // Blog page
       add_submenu_page('uza_main_page', 'Uza Blog', __('Блог', 'uza'), 'manage_options', 'uza_blog_page', 'uza_theme_create_blog_page');
+
+      // Newsletter page
+      add_submenu_page('uza_main_page', 'Uza Newletter', __('Почта', 'uza'), 'manage_options', 'uza_newsletter_page', 'uza_theme_create_newsletter_page');
+
+      // Footer page
+      add_submenu_page('uza_main_page', 'Uza Footer', __('Подвал', 'uza'), 'manage_options', 'uza_footer_page', 'uza_theme_create_footer_page');
 
       // Activate our custom settings
       add_action('admin_init', 'uza_custom_settings');
