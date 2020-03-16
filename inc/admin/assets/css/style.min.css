@@ -1,6 +1,7 @@
 .flex{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .align_horizontal{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .align_vertical{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.customize-control-radio .customize-control-title{background-color:#fff}
 .uza_header_options{display:block}
 .header_image_preview{margin-top:20px;border:1px solid #eee;max-width:30%;-o-object-fit:cover;object-fit:cover}
 .header_image_preview img{max-width:inherit;-o-object-fit:cover;object-fit:cover}

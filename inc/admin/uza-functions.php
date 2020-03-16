@@ -42,6 +42,7 @@ function uza_add_admin_page(){
 add_action('admin_menu', 'uza_add_admin_page');
 
 require_once 'uza-theme/settings/settings.php';
+require_once 'uza-theme/customizer/customizer.php';
 require_once 'front.php';
 require_once 'uza-theme/ui/pages-ui.php';
 

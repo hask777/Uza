@@ -44,7 +44,7 @@
                                   <span class="post-date"><?php the_date(); ?></span>
                                   <a href="#" class="post-title"><?php the_title(); ?></a>
                                   <p><?php the_excerpt(); ?></p>
-                                  <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
+                                  <a href="<?php the_permalink(); ?>" class="read-more-btn">Читать<i class="arrow_carrot-2right"></i></a>
                               </div>
                           </div>
                      </div>

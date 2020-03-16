@@ -9,6 +9,7 @@ function uza_custom_settings(){
    require 'portfolio/portfolio.php';
    require 'advertising/advertising.php';
    require 'blog/blog.php';
+   require 'newsletter/newsletter.php';
 }
 
 require 'main/functions/main.php';
@@ -18,3 +19,4 @@ require 'service/functions/service.php';
 require 'portfolio/functions/portfolio.php';
 require 'advertising/functions/advertising.php';
 require 'blog/functions/blog.php';
+require 'newsletter/functions/newsletter.php';
