@@ -13,6 +13,11 @@
  require get_template_directory() . '/inc/admin/uza-functions.php';
 
  /**
+  * Add Images field to terms.
+  */
+ require get_template_directory() . '/inc/cat-image.php';
+
+ /**
   * Gutenberg functions.
   */
  require get_template_directory() . '/inc/gutenberg.php';
