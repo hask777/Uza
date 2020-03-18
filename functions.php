@@ -43,9 +43,14 @@ require get_template_directory() . '/inc/widgets/widgets_init.php';
 require get_template_directory() . '/inc/post-types/portfolio.php';
 
 /**
- * Enqueue scripts and styles.
+ *  REST url for portfolio post type.
  */
 require get_template_directory() . '/inc/rest/portfolio-api.php';
+
+/**
+ *   AJAX
+ */
+require get_template_directory() . '/inc/rest/ajax.php';
 
 /**
  * Enqueue scripts and styles.

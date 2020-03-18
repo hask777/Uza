@@ -10,7 +10,7 @@
         </div>
 
         <div class="row">
-                  <?php
+               <?php
                   $terms_list = array();
                   $terms_list =  get_option('services_terms_list');
 
@@ -21,7 +21,7 @@
                      $image_id = get_term_meta( $id, '_thumbnail_id', 1 );
                      $image_url = wp_get_attachment_image_url( $image_id, 'full' );
 
-                  ?>
+               ?>
                   <!-- Single Service Area -->
                   <div class="col-12 col-lg-2 col-md-4 col-sm-6">
                       <div class="single-service-area mb-80">

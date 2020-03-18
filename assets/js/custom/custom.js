@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 
     $('#load_more_btn').on('click', function(){
 
-        $.getJSON( uzaUrl, posts => {
+        $.getJSON( uzaUrl, posts => { 
 
             var containerFluid = portfolio.append(`
                 <div class="row uza-portfolio">

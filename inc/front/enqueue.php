@@ -30,7 +30,7 @@ function uza_scripts() {
     wp_register_script('uza-bundle-js', get_template_directory_uri() . '/assets/js/uza.bundle.js', array('jquery'), '20151215', true);
     wp_register_script('uza-active-js', get_template_directory_uri() . '/assets/js/default-assets/active.js', array('jquery'), '20151215', true);
     wp_register_script('uza-webpack-bundle-js', get_template_directory_uri() . '/assets/js/custom/bundle.js', array('jquery'), '20151215', true);
-    // wp_register_script('uza-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '20151215', true);
+    wp_register_script('uza-portfolio-js', get_template_directory_uri() . '/assets/js/custom/portfolio.js', array('jquery'), '20151215', true);
 
     // Enqueue scripts
     wp_enqueue_script( 'uza-popper-js' );
@@ -38,7 +38,12 @@ function uza_scripts() {
     wp_enqueue_script( 'uza-bundle-js' );
     wp_enqueue_script( 'uza-active-js' );
     wp_enqueue_script( 'uza-webpack-bundle-js' );
-    // wp_enqueue_script( 'uza-custom-js' );
+    wp_enqueue_script( 'uza-portfolio-js' );
+
+    wp_localize_script('uza-bundle-js', 'stb_ajax_tabs_script', array(
+		'url' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('tabs-nonce')
+	));
 
 	wp_enqueue_script( 'uza-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
